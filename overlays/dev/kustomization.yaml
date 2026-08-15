@@ -6,6 +6,6 @@ resources:
 images:
   - name: moriarty/backend-placeholder
     newName: 123456789.dkr.ecr.us-east-1.amazonaws.com/moriarty
-    newTag: backend-latest
+    newTag: backend-3f78bb665831424438bd27dfc5e7f3bd62d8cc18
 patches:
   - path: replica-patch.yaml
