@@ -4,3 +4,7 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+  - hpa.yaml
+commonLabels:
+  app.kubernetes.io/name: ems-backend
+  app.kubernetes.io/part-of: ems  # adding labels to all the resources in this kustomization  

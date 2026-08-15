@@ -1,20 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-prod
+  name: ems-backend-dev
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-
   source:
     repoURL: https://github.com/mohamednasser221b-web/ArgoCd.git
     targetRevision: main
-    path: overlays/prod
-
+    path: overlays/dev          # ← Points to the DEV overlay
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx
-
+    namespace: ems-dev
   syncPolicy:
     automated:
       prune: true

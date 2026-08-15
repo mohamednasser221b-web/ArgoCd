@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: ems-backend
 spec:
   selector:
-    app: nginx
+    app: ems-backend
   ports:
     - port: 80
       targetPort: 80
